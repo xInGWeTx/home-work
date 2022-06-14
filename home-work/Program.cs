@@ -13,4 +13,3 @@ else{
     Console.WriteLine("Наибольшее число {0} ", num2);
     Console.WriteLine("Наименьщее число {0} ", num1);
 }
-
