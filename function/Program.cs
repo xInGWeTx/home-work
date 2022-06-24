@@ -13,7 +13,7 @@
 // ShowNumber();
 
 
-// int NumberWithoutSecDig(int Number){   
+// int NumberWithoutSecDig(int Number){
 //     int NewNumber = Number / 100 * 10 + Number % 10;
 //     return NewNumber;
 // }
@@ -77,7 +77,7 @@
 // void getDot(int num){
 //     if(num == 1){
 //             Console.WriteLine("x > 0,y > 0");
-//     }   
+//     }
 //     else if(num == 2)
 //             Console.WriteLine("x < 0, y > 0");
 //     else if(num == 3)
@@ -85,7 +85,7 @@
 //     else if(num == 4)
 //             Console.WriteLine("x > 0, y < 0");
 //     else
-//             Console.WriteLine("Введено некоректное число");    
+//             Console.WriteLine("Введено некоректное число");
 // }
 // Console.WriteLine("Введите номер четверти");
 // int a = Convert.ToInt32(Console.ReadLine());
@@ -109,28 +109,94 @@
 Console.Clear();
 
 
-void listSqrt(int n){
-        int count = 1;
-        
-        Console.Write(n + "->");
-    
-        if(n > 0){
-        
-        while(count <= n){
-        Console.Write(Math.Pow(count, 2) + ", ")  ;
-        count++;
+// void listSqrt(int n){
+//         int count = 1;
+
+//         Console.Write(n + "->");
+
+//         if(n > 0){
+
+//         while(count <= n){
+//         Console.Write(Math.Pow(count, 2) + ", ")  ;
+//         count++;
+//         }
+//         }else
+//         {
+//             count = -1;
+//             while(count >= n){
+//             Console.Write(Math.Pow(count, 2) + ", ")  ;
+//             count--;
+//         }
+//     }
+
+// }
+
+// Console.WriteLine("Введите любое число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// listSqrt(a);
+
+// int sumToNum(int num)
+// {
+//     int sum = 0;
+//     for(int i = 1; i <= num; i++)
+//     {
+//         sum += i;
+//     }
+//     return sum;
+// }
+// Console.WriteLine("Input number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Sum of elements is " + sumToNum(number));
+
+// Console.WriteLine("Введите любое число");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int count = 0;
+// while(number > 0){
+//     number= number / 10;
+//     count++;
+// }
+// Console.WriteLine(count);
+
+// int ToNum(int num){
+
+//     int multiple = 1;
+//     for(int i= 1; i <= num; i++)
+//     {
+//         multiple *=i;
+//     }
+//     return multiple;
+// }
+// Console.WriteLine("Введите любое число");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(ToNum(number));
+
+
+int[] CreateRandomArray(int size)
+{
+    int[] array = new int [size];
+        for(int i= 0; i < size; i++){
+            array[i] = new Random().Next(0,2);
         }
-        }else
-        {
-            count = -1;
-            while(count >= n){
-            Console.Write(Math.Pow(count, 2) + ", ")  ;
-            count--;
-        }
+        return(array);
+}
+int[] CreateArray(int size){
+    int[] array = new int [size];
+    for(int i= 0; i < size; i++){
+        Console.Write("Input" + i + "element: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
     }
-    
+    return(array);
 }
 
-Console.WriteLine("Введите любое число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-listSqrt(a);
+
+void ShowArray(int[] array)
+{
+    for(int i = 0;i < array.Length; i++){;
+        Console.Write(array[i] + " ");
+    }
+}
+int [] myRandomArray = CreateRandomArray(8);
+ShowArray(myRandomArray);
+Console.WriteLine();
+int[] myArray = CreateArray(8);
+ShowArray(myArray);
