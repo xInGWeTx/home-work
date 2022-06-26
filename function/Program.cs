@@ -171,32 +171,140 @@ Console.Clear();
 // Console.WriteLine(ToNum(number));
 
 
-int[] CreateRandomArray(int size)
-{
-    int[] array = new int [size];
-        for(int i= 0; i < size; i++){
-            array[i] = new Random().Next(0,2);
-        }
-        return(array);
-}
-int[] CreateArray(int size){
-    int[] array = new int [size];
-    for(int i= 0; i < size; i++){
-        Console.Write("Input" + i + "element: ");
-        array[i] = Convert.ToInt32(Console.ReadLine());
-    }
-    return(array);
-}
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int [size];
+//         for(int i= 0; i < size; i++){
+//             array[i] = new Random().Next(0,2);
+//         }
+//         return(array);
+// }
+// int[] CreateArray(int size){
+//     int[] array = new int [size];
+//     for(int i= 0; i < size; i++){
+//         Console.Write("Input" + i + "element: ");
+//         array[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return(array);
+// }
 
 
-void ShowArray(int[] array)
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0;i < array.Length; i++){;
+//         Console.Write(array[i] + " ");
+//     }
+// }
+// int [] myRandomArray = CreateRandomArray(8);
+// ShowArray(myRandomArray);
+// Console.WriteLine();
+// int[] myArray = CreateArray(8);
+
+
+// ShowArray(myArray);
+
+// string name = "Имя";
+// int age = 99;
+ 
+// Console.WriteLine($"Имя: {name, -10.CompareTo/*Кол-во пробелов*/} Возраст: {age}"); // пробелы после
+// Console.WriteLine($"Имя: {name, 15} Возраст: {age}"); // пробелы до
+
+
+// int[] CreateRandomArray(int size, int min, int max){
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(min,max+1);
+//     }
+//     return array;
+// }
+// void ShowArray (int[] array){
+
+//     for (int i = 0; i < array.Length; i++){
+//         Console.Write(array[i] + " ");
+//     }
+// }
+
+// int[] MyArray = CreateRandomArray(12,-9, 9);
+// ShowArray(MyArray);
+
+// int sum_pos = 0;
+// int sum_neg = 0;
+// for (int i = 0; i < MyArray.Length; i++)
+// {
+//     if(MyArray[i] > 0)
+//         sum_pos += MyArray[i];
+//     else
+//         sum_neg += MyArray[i];
+// }
+// Console.WriteLine($"Сумма положительных: {sum_pos}. Сумма отрицальных {sum_neg}");
+
+// int[] CreateRandomArray(int size){
+//     int[] array = new int[size];
+//     for(int i = 0; i < size; i++){
+//         array[i] = new Random().Next(-100,101);
+//     }
+//     return array;
+// }
+// int[] GetArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         /*array[i] = array[i] * (-1);*/
+//         array[i]*=-1;
+//     }
+//     return array;
+// }
+// void ShowArray (int[] array){
+
+//     for (int i = 0; i < array.Length; i++){
+//         Console.Write(array[i] + " ");
+//     }
+// }
+// int[] array =CreateRandomArray(3);
+// ShowArray(array);
+// Console.WriteLine();
+// ShowArray(GetArray(array));
+
+int Number = 25;
+int size = 15;
+int min = 1;
+int max = 50;
+
+int[] CreateArray(int size, int min, int max)
 {
-    for(int i = 0;i < array.Length; i++){;
-        Console.Write(array[i] + " ");
+    int[] arr = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = new Random().Next(min, max + 1);
     }
+    return arr;
 }
-int [] myRandomArray = CreateRandomArray(8);
-ShowArray(myRandomArray);
+
+bool FindNumber(int[] array, int Number)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == Number) return true;
+    }
+    return false;
+}
+
+void PrinArray(int[] arr)
+{
+    System.Console.WriteLine();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        System.Console.Write($"{arr[i]} ");
+    }
+    System.Console.WriteLine();
+}
+
+int[] array = CreateArray(size, min, max);
+PrinArray(array);
+if (FindNumber(array, Number)){
+    Console.WriteLine($"Число {Number} присутствует в массиве");
+    }
+else {
+    Console.WriteLine($"Число {Number} отсутсвует в массиве");
+    }
 Console.WriteLine();
-int[] myArray = CreateArray(8);
-ShowArray(myArray);
