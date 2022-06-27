@@ -11,7 +11,7 @@ Console.Clear();
 //     }
 //     return array;
 // }
-
+// 
 // void PrintResult(int[] array)
 // {
 //     int even = 0;
@@ -59,31 +59,60 @@ Console.Clear();
 
 // 3 задание (Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.)
 
-int size = new Random().Next(4, 15);
+// int size = new Random().Next(4, 15);
 
-Console.WriteLine($"Количетсов элементов массива: {size}");
+// Console.WriteLine($"Количетсов элементов массива: {size}");
 
-int[] CreateRandomArray(int size)
-{
-    int[] array = new int[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i] = new Random().Next(10,2000);
-    }
-    return array;
-}
+// int[] CreateRandomArray(int size)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(10,2000);
+//     }
+//     return array;
+// }
 
-void PrintMinMax(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.WriteLine(array[i]);
-    }
-    int difference = array.Max() - array.Min();
-    Console.WriteLine($"Максимальное значение массива {array.Max()}, минимальное значение массива {array.Min()}");
-    Console.WriteLine($"Разница между минимальным и максимальным значениями массива составляет {difference}");
-}
+// void PrintMinMax(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.WriteLine(array[i]);
+//     }
+//     int difference = array.Max() - array.Min();
+//     Console.WriteLine($"Максимальное значение массива {array.Max()}, минимальное значение массива {array.Min()}");
+//     Console.WriteLine($"Разница между минимальным и максимальным значениями массива составляет {difference}");
+// }
 
-PrintMinMax(CreateRandomArray(size));
+// PrintMinMax(CreateRandomArray(size));
+
+
+// 4 задание()
+
+// int[] CreateRandomArray(int size, int min, int max)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(min, max +1);
+//     }
+//     return array;
+// }
+// void PrintCountArray(int[] arr)
+// {
+//     int count = 1;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write(arr[i] + " ");
+//         if (arr[i] >= 10 && arr[i] <= 99) count++;
+//     }
+    
+//     Console.WriteLine($"Количество чисел из диапазона [10, 99] равно {count}");
+
+// }
+// int[] array= CreateRandomArray(123, -100, 200);
+// PrintCountArray(array);
+
+
 
 
